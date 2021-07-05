@@ -1,0 +1,62 @@
+div  style="margin: 50px"
+  h6 selected seates : <span id="check_seats">0</span>
+  h6 Total Price of booking : <span id ="last_amount">0</span>
+input type="hidden" value=@show.amount id="amount"  
+input type="hidden" value=@show.amount id="amount" 
+input type="hidden" id="amount" value=@show.amount
+div class="row"
+  div class="card"
+    div class="card-body"
+      div class="row" id="seats"
+          -(1..@show.screen.seats).each do |index|
+            -if @booking_seat.include?index
+              div class="col-1" style="margin: 0 15px"
+              <input class="form-check-input" type="checkbox" checked disabled>
+            -else
+              div class="col-1" style="margin: 0 15px"
+              input class="form-check-input" type="checkbox" name="checkbox" id="inlineCheckbox1" value=index 
+          div
+          =form_for @booking, url: theatre_show_bookings_path,method:"POST" do |f|
+            = f.hidden_field :user_id, value: current_user.id
+            = f.hidden_field :show_id, value: @show.id
+            = f.hidden_field :amount, value: "", id: "total_amount"
+            = f.hidden_field :seat_number, value: "", id: "seatnumbers"
+            br
+            br
+            = f.button :Submit, class:"btn btn-danger" 
+
+javascript:
+  const seatsContainer = document.getElementById("seats")
+  let bookSeats = []
+  let amt = document.getElementById("amount").value;
+
+  seatsContainer.addEventListener('click', (e) => {
+    if (e.target.checked === true) {
+      bookSeats.push(e.target.value);
+      console.log(bookSeats);
+      data = bookSeats.filter(Number)
+      document.getElementById("seatnumbers").value = data.join(",");
+      document.getElementById("total_amount").value = data.length  * amt;
+      document.getElementById('check_seats').innerText = data + " Selected";
+      document.getElementById('last_amount').innerText = data.length * amt;
+      console.log(document.getElementById("seatnumbers").value);
+    } else {
+      if (bookSeats.includes(e.target.value)){
+        bookSeats.pop(e.target.value);
+      } else {
+        console.log('Normal')
+      }
+      console.log(bookSeats);
+      data = bookSeats.filter(Number)
+      document.getElementById("seatnumbers").value = data.join(",");
+      document.getElementById("total_amount").value = data.length  * amt;
+      document.getElementById('check_seats').innerText = data + " Selected";
+      document.getElementById('last_amount').innerText = data.length * amt;
+      console.log(document.getElementById("seatnumbers").value);
+    }
+  });
+
+
+    
+
+

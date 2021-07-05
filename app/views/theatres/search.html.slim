@@ -1,0 +1,37 @@
+-if @theatres.nil?
+  h2= "No theatres found"
+- else
+  div class="container"
+    div class="card-list item-align-center" style="width:70rem;"
+      div class="card-body-list" style="width:70rem; position: center;"  
+          div class="row"
+            -@theatres.each do | var |
+              div class="col-10 item-align-center" style=" margin-top: 10px;" 
+                div class="card"
+                  -if  var.image.attached?
+                    = image_tag  var.image, style:"width:926px;height:450px" 
+                  -else
+                    = ??
+                div class="card-body-new " style="width:10rem; text-align: center; "
+                h3= "Theatre Name: #{var.name}"
+                h5= "Pincode: #{var.pincode}"
+                h5= "City: #{var.city.name}"
+                =link_to "See Available Shows", theatre_shows_path(var.id),  class: "btn btn-primary"
+-if @movies.nil?
+  h2= "No Movies"
+-else
+  div class="container"
+    -@movies.each do |m|
+      div class="col-12 item-align-center" style=" margin-top: 10px;" 
+        div class="card-5" 
+          -if  m.image.attached?
+            = image_tag  m.image, style:"width:926px;height:450px" 
+          -else
+            = ??
+        div class="card-body-new " style="width:10rem; text-align: center; "
+        h3= "Movie Name: #{m.name}"
+        h5= "Category: #{m.category}"
+        h5= "Release_Date: #{m.release_date}"
+        h5= "Runtime: #{m.runtime}"
+        =link_to "Book Now", "#",  class: "btn btn-primary"
+

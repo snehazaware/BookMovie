@@ -1,0 +1,18 @@
+@import "bootstrap";
+
+body {
+  text-align: center;
+  // background-image: url("mm.jpeg");
+  // background-repeat: no-repeat, repeat;
+}
+
+.carousel-inner {
+  max-height: 700px;
+  img {
+    max-height: 500px;
+    max-width: 1000px;
+    width: 50%;
+    margin: auto;
+  }
+}
+

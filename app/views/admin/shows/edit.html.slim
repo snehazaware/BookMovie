@@ -1,0 +1,26 @@
+div class="card-add " style="width: 30rem;"
+  div class="card-body "
+    h3 Edit show
+    = form_for @show, url: admin_show_path(@show.id) do |var|
+      =var.label :screen_id
+      br
+      =var.text_field :screen_id, placeholder: "Enter Screen Id"
+      br
+      =var.label :movie_id
+      br
+      =var.text_field :movie_id, placeholder: "Enter Movie Id"
+      br
+      =var.label :amount
+      br
+      =var.text_field :amount, placeholder: "Enter Show Amount"
+      br
+      =var.label :date
+      br
+      =var.text_field :date, placeholder: "Enter Show Date"
+      br
+      =var.label :time
+      br
+      =var.text_field :time, placeholder: "Enter Show Time"
+      br
+      br
+      =var.button :submit, class: "btn btn-outline-success"

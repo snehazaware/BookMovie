@@ -1,0 +1,15 @@
+div class="container"
+  div class="card-list item-align-center" style="width:70rem;"
+    div class="card-body-list" style="width:70rem; position: center;"  
+        div class="row"
+            div class="col-10 item-align-center" style=" margin-top: 10px;" 
+              div class="card"
+                -if @theatre.image.attached?
+                  = image_tag @theatre.image, style:"width:926px;height:450px" 
+                -else
+                  = ??
+              div class="card-body-new " style="width:10rem; text-align: center; "
+              h3= @theatre.name
+              h4= @theatre.pincode
+              h5= @theatre.city.name
+              =link_to "See Available Shows", theatre_shows_path(@theatre),  class: "btn btn-primary"

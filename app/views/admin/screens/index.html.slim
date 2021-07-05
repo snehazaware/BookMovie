@@ -1,0 +1,35 @@
+div class="row"
+    = render "admin/sidebar"
+    div class="col-9"
+      h3 Screens
+      table.table
+        thead
+          tr
+            th scope="col" Name of Screen
+            th scope="col" No of Seats
+            th scope="col" edit
+            th scope="col" delete
+        tbody
+          - @screens.each do | var |
+            tr
+              td= var.name
+              td= var.seats
+              td= link_to "", edit_admin_screen_path(var.id), method: "GET",class:"fas fa-edit"
+              td= link_to "", admin_screen_path(var.id), method: "DELETE", class:"far fa-trash-alt"
+
+div class="card-add " style="width: 30rem;"
+  div class="card-body "
+    h3 Add New Screen
+    = form_for @screen, url: admin_screens_path(@theatre) do |var|
+      =var.hidden_field :theatre_id, value:@theatre.id 
+     
+      =var.label :name
+      br
+      =var.text_field :name,placeholder: "Enter Screen Name"
+      br
+      =var.label :seats
+      br
+      =var.text_field :seats,placeholder: "Enter No. of Seats"
+      br
+      br
+      =var.button :save, class: "btn btn-outline-success"

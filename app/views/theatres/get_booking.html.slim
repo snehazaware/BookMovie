@@ -1,0 +1,16 @@
+= form_for @booking, url: get_booking_path(@s) do |var|
+    =var.hidden_field :show_id, value:@booking.show_id 
+    =var.hidden_field :user_id, value:@booking.user_id  
+    br
+    br
+    =var.label :comment
+    br
+    =var.text_field :comment
+    br
+    br
+    =var.label :rating
+    br
+    =var.text_field :rating
+    br
+    br
+    =var.button :save, class: "btn btn-outline-success"

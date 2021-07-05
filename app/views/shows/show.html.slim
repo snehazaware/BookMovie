@@ -1,0 +1,17 @@
+div class="card-2 " 
+  div class="row g-0"
+    div class="col-md-4"
+      -if @show.movie.image.attached?
+        = image_tag @show.movie.image, class: "card-img-top"
+      -else
+        = ??
+    div class="col-md-8"
+      div class="card-body"
+        h4= "Show Name: #{@show.movie.name}"
+        h6= "Show Date: #{@show.date}"
+        h6= "Time: #{@show.time}"
+        h6= "Category: #{@show.movie.category}"
+        h6= "Runtime: #{@show.movie.runtime} mins"
+        h6= "Screen: #{@show.screen.name}"
+        h6= "Amount: #{@show.amount} Rs"
+        = link_to "Book Show", theatre_show_bookings_path(@theatre,@show.id), class: "btn btn-primary"

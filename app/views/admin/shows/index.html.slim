@@ -1,0 +1,55 @@
+div class="row"
+    = render "admin/sidebar"
+    div class="col-9"
+      h3 Shows
+      table.table
+        thead
+          tr
+            th scope="col" Movie Name
+            th scope="col" Category
+            th scope="col" Runtime
+            th scope="col" Show On
+            th scope="col" Time
+            th scope="col" Amount
+            th scope="col" Edit Show
+            th scope="col" Delete Show
+        tbody
+          - @screens.each do | var |
+            -var.shows.each do | the |
+              tr
+                td= the.movie.name
+                td= the.movie.category
+                td= the.movie.runtime
+                td= the.date.strftime("%B %-d, %Y")
+                td= the.time.strftime("%I:%M %p")
+                td= the.amount
+                td= link_to "", edit_admin_show_path(the.id), method: "GET", class:"fas fa-edit"
+                td= link_to "", admin_show_path(the),method: "DELETE",class:"far fa-trash-alt"
+
+div class="card-add " style="width: 30rem;"
+  div class="card-body "
+    h3 Add New show
+    = form_for @show, url: admin_shows_path(@screen) do |var|
+      =var.label :screen_id
+      br
+      =var.select :screen_id,placeholder: "Enter Screen Id" 
+      br
+      =var.label :movie_id
+      br
+      =var.text_field :movie_id ,placeholder: "Enter Movie Id"
+      br
+      =var.label :amount
+      br
+      =var.text_field :amount, placeholder: "Enter Show Amount"
+      br
+      =var.label :date
+      br
+      =var.text_field :date, placeholder: "Enter Show Date"
+      br
+      =var.label :time
+      br
+      =var.text_field :time, placeholder: "Enter Show Time"
+      br
+      =var.button :submit, class: "btn btn-outline-success"
+
+

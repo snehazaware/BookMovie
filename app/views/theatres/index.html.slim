@@ -1,0 +1,48 @@
+
+div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+  div class="carousel-indicators"
+    button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"
+    button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"
+    button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"
+  div class="carousel-inner"
+    div class="carousel-item active"
+      = image_tag "raid.jpeg", class:"d-block w-100"
+    div class="carousel-item"
+      = image_tag "supr.jpeg", class:"d-block w-100"
+    div class="carousel-item"
+      = image_tag "drishyam.jpeg", class:"d-block w-100"
+  button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"
+    span class="carousel-control-prev-icon" aria-hidden="true"
+    span class="visually-hidden" Previous
+  button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"
+    span class="carousel-control-next-icon" aria-hidden="true"
+    span class="visually-hidden" Next
+
+
+div
+  p
+
+div
+  p
+
+div class="container"
+  div class="card-list item-align-center" style="width:70rem;"
+    div class="card-body-list" style="width:70rem; position: center;"  
+        div class="row"
+          -@theatres.each do |the|
+            div class="col-3" style="width: 20rem; margin-top: 10px;" 
+              div class="card"
+                -if the.image.attached?
+                  = image_tag the.image, class: "card-img-top"
+                -else
+                  = ??
+              div class="card-body-new item-align-center" style="width:10rem; text-align: center; "
+              h3= the.name
+              =link_to "See Details", theatre_path(the.id),  class: "btn btn-primary"
+          
+          
+
+
+  
+
+
