@@ -32,7 +32,7 @@ div class="card-add " style="width: 30rem;"
     = form_for @show, url: admin_shows_path(@screen) do |var|
       =var.label :screen_id
       br
-      =var.select :screen_id,placeholder: "Enter Screen Id" 
+      =var.text_field :screen_id,placeholder: "Enter Screen Id" 
       br
       =var.label :movie_id
       br
@@ -51,5 +51,8 @@ div class="card-add " style="width: 30rem;"
       =var.text_field :time, placeholder: "Enter Show Time"
       br
       =var.button :submit, class: "btn btn-outline-success"
+-if flash[:messages]
+  =flash[:messages]
+end
 
 

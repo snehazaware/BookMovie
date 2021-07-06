@@ -11,9 +11,5 @@ class TheatresController < ApplicationController
   def search
     @theatres = Theatre.search(params[:search])
     @movies = Movie.search(params[:search])
-    puts @theatres.inspect
-    puts @movies.inspect
-  end
-
-  
+  end 
 end

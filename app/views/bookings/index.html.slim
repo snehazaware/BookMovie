@@ -1,20 +1,19 @@
 div  style="margin: 50px"
   h6 selected seates : <span id="check_seats">0</span>
-  h6 Total Price of booking : <span id ="last_amount">0</span>
-input type="hidden" value=@show.amount id="amount"  
+  h6 Total Price of booking : <span id ="last_amount">0</span> 
 input type="hidden" value=@show.amount id="amount" 
 input type="hidden" id="amount" value=@show.amount
 div class="row"
   div class="card"
     div class="card-body"
-      div class="row" id="seats"
+      div class="row" id="bseats"
           -(1..@show.screen.seats).each do |index|
-            -if @booking_seat.include?index
+            -if @booked_seats.include?index
               div class="col-1" style="margin: 0 15px"
               <input class="form-check-input" type="checkbox" checked disabled>
             -else
               div class="col-1" style="margin: 0 15px"
-              input class="form-check-input" type="checkbox" name="checkbox" id="inlineCheckbox1" value=index 
+              input class="form-check-input" type="checkbox" name="checkbox" id=index value=index 
           div
           =form_for @booking, url: theatre_show_bookings_path,method:"POST" do |f|
             = f.hidden_field :user_id, value: current_user.id
@@ -26,14 +25,13 @@ div class="row"
             = f.button :Submit, class:"btn btn-danger" 
 
 javascript:
-  const seatsContainer = document.getElementById("seats")
+  const seats_Container = document.getElementById("bseats")
   let bookSeats = []
   let amt = document.getElementById("amount").value;
 
-  seatsContainer.addEventListener('click', (e) => {
+  seats_Container.addEventListener('click', (e) => {
     if (e.target.checked === true) {
       bookSeats.push(e.target.value);
-      console.log(bookSeats);
       data = bookSeats.filter(Number)
       document.getElementById("seatnumbers").value = data.join(",");
       document.getElementById("total_amount").value = data.length  * amt;
@@ -46,7 +44,6 @@ javascript:
       } else {
         console.log('Normal')
       }
-      console.log(bookSeats);
       data = bookSeats.filter(Number)
       document.getElementById("seatnumbers").value = data.join(",");
       document.getElementById("total_amount").value = data.length  * amt;

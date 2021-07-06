@@ -7,8 +7,8 @@ class CreateMovies < ActiveRecord::Migration[6.1]
       t.string :language
       t.string :category
       t.float :runtime
-
       t.timestamps
+     
     end
   end
 end

@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   resources :theatres do
     resources :shows do
       resources :bookings do
-        resources :payments
       end
     end
   end

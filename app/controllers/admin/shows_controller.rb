@@ -1,8 +1,7 @@
 class Admin::ShowsController < ApplicationController
+  before_action :get_theater
+
   def index
-    @theatreadmin = TheatreAdmin.where(user: current_user).first
-    @theatre = @theatreadmin.theatre
-    @screens = @theatre.screens
     @show = Show.new
   end
 
@@ -10,6 +9,9 @@ class Admin::ShowsController < ApplicationController
     @show = Show.create(show_params)
     if @show.save
       redirect_to admin_shows_path
+    else
+      flash.now[:messages] = @show.errors.full_messages[0]
+      render :index
     end
   end
 
@@ -17,8 +19,6 @@ class Admin::ShowsController < ApplicationController
     @show = Show.find(params[:id])
     if @show.destroy
       redirect_to admin_shows_path
-    else
-      render admin_shows_path
     end
   end
 
@@ -37,4 +37,9 @@ class Admin::ShowsController < ApplicationController
     params.require(:show).permit(:movie_id, :screen_id, :date, :time, :amount)
   end
 
+  def get_theater
+    @ta = TheatreAdmin.where(user: current_user).first
+    @theatre = @ta.theatre
+    @screens = @theatre.screens
+  end
 end
