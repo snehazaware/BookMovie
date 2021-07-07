@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
       redirect_to theatre_show_booking_path(@booking.show.screen.theatre.id,
                                             @booking.show.id, @booking.id)
     else
-      render :index
+      render :action => index
     end
   end
 

@@ -4,4 +4,5 @@ class Theatre < ApplicationRecord
   has_one_attached :image
   has_many :theatre_admins
   scope :search, ->(name) { where(name: name) }
+  validates :name, :pincode, presence: true
 end

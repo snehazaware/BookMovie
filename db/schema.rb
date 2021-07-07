@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2021_07_04_182100) do
     t.boolean "is_confirm"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "seats"
+    t.string "seat_number"
     t.integer "amount"
     t.index ["show_id"], name: "index_bookings_on_show_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"

@@ -1,0 +1,400 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/models/user.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/helpers/bookings_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/helpers/cities_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/helpers/payments_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/helpers/screens_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/helpers/shows_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/helpers/theatre_admins_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/helpers/theatres_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/models/booking.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/models/city.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/models/movie.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/models/screen.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/models/show.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/models/theatre_admin.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/models/theatre.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/channels/application_cable/channel.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/controllers/admin/bookings_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/controllers/admin/screens_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/controllers/admin/shows_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/controllers/application_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/controllers/bookings_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/controllers/shows_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/controllers/theatres_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/quickinsure/Desktop/sneha/BookMovieShow/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1625593172
+  }
+}

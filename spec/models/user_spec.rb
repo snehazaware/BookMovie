@@ -1,18 +1,12 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe User, type: :model do
-  context 'validation tests' do 
-    it 'ensures email presence' do
-      user = User.new(name: 'First', password: "123", mobileno: 123456789, role: "user").save
-      expect(user).to eq(false)
-    end
-    it 'ensures password presence' do
-      user = User.new(name: 'First', email: "abc@gmail.com", mobileno: 123456789, role: "user").save
-      expect(user).to eq(false)
+  context "validation tests" do
+    it "validates presence" do
+      user = User.new
+      user.validate
+      expect(user.errors[:name]).to include("can't be blank")
+      expect(user.errors[:mobileno]).to include("can't be blank")
     end
   end
-
-  context 'scope tests' do 
-  end
-  
 end
